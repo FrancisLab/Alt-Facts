@@ -1,10 +1,5 @@
-# v-chill
+# Alt-Facts
 
-A really, really useless Chrome Extension that makes your browser SO CHILL. 95% experimenting with Chrome, 5% a bad joke.
-
-##### Features, such as they are:
-1. All text is lowercase.
-2. Unchill words are replaced with chill counterparts. `very` becomes `v`, for instance.
-3. Actually that's it. Just those two.
+A silly extention that replaces offensive words like 'fake' and 'false' with the more acceptable 'alternative'. Made out of 100% pure cynicism.
 
 Enable and disable from `chrome://extensions`.
