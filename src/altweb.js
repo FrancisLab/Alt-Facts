@@ -4,7 +4,6 @@ const STYLE_NODE_NAME = 'style';
 
 const OFFENSIVE_WORDS = ['false', 'fake', 'untrue', 'bogus', 'distorted', 'erroneous', 'fictitious', 'inaccurate', 'invalid', 'misleading', 'phony', 'untruthful', 'inexact'];
 
-
 function isTextNode(node) {
     return node.nodeType === TEXT_NODE;
 }
@@ -30,17 +29,27 @@ function makeAllNodesRight(sourceNode) {
     }
 }
 
+function replaceMatch(match)
+{
+    if (match === match.toUpperCase()) {
+        return 'ALTERNATIVE';
+    }
+    else if (match[0] === match[0].toUpperCase()) {
+        return 'Alternative';
+    }
+    else {
+        return 'alternative';
+    }
+}
+
 function makeNodeRight(node) {
     if (node.textContent !== undefined) {
         var textContent = node.textContent;
 
-        // TODO: lower case is not that alt
-        textContent = textContent.toLowerCase();
-
         for (var i = 0; i < OFFENSIVE_WORDS.length; i++)
         {
-            var searchReg = new RegExp(OFFENSIVE_WORDS[i], 'g');
-            textContent = textContent.replace(searchReg, 'alternative');
+            var searchReg = new RegExp(OFFENSIVE_WORDS[i], 'gi');
+            textContent = textContent.replace(searchReg, replaceMatch);
         }
 
         node.textContent = textContent;
