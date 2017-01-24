@@ -1,9 +1,9 @@
 {
     "manifest_version": 2,
-    "name": "Alt-Web",
+    "name": "Alt-Facts",
     "version": "1.0",
 
-    "description": "Tired of all these liberals referring to your totally reliable source of information as fake news? Well, I've got just the extension for you! The Alt-Web extension will conveniently replace all needlessly offensive words like 'fake', 'false' and 'untrue' with the much more acceptable 'alternative!",
+    "description": "Tired of all these liberals referring to your totally reliable source of information as fake news? Well, I've got just the extension for you! The Alt-Facts extension will conveniently replace all needlessly offensive words like 'fake', 'false' and 'untrue' with the much more acceptable 'alternative!",
 
     "icons": {
         "128": "media/logo128.png",
@@ -17,7 +17,7 @@
     "content_scripts": [
         {
             "matches": [ "<all_urls>" ],
-            "js": [ "src/altweb.js" ],
+            "js": [ "src/altfacts.js" ],
             "run_at": "document_idle"
         }
     ]
